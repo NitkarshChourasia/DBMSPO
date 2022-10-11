@@ -16,6 +16,100 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `4Employee`
+--
+
+DROP TABLE IF EXISTS `4Employee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `4Employee` (
+  `EmpNo` int(3) DEFAULT NULL,
+  `EmpName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `JoiningDate` date DEFAULT NULL,
+  `Salary` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `4Employee`
+--
+
+LOCK TABLES `4Employee` WRITE;
+/*!40000 ALTER TABLE `4Employee` DISABLE KEYS */;
+/*!40000 ALTER TABLE `4Employee` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `4NewEmployee1`
+--
+
+DROP TABLE IF EXISTS `4NewEmployee1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `4NewEmployee1` (
+  `EmpNo` int(3) DEFAULT NULL,
+  `EmpName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `JoiningDate` date DEFAULT NULL,
+  `Salary` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `4NewEmployee1`
+--
+
+LOCK TABLES `4NewEmployee1` WRITE;
+/*!40000 ALTER TABLE `4NewEmployee1` DISABLE KEYS */;
+/*!40000 ALTER TABLE `4NewEmployee1` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `4NewEmployee2`
+--
+
+DROP TABLE IF EXISTS `4NewEmployee2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `4NewEmployee2` (
+  `EmpNo` int(3) DEFAULT NULL,
+  `EmpName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `4NewEmployee2`
+--
+
+LOCK TABLES `4NewEmployee2` WRITE;
+/*!40000 ALTER TABLE `4NewEmployee2` DISABLE KEYS */;
+/*!40000 ALTER TABLE `4NewEmployee2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `4NewEmployee3`
+--
+
+DROP TABLE IF EXISTS `4NewEmployee3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `4NewEmployee3` (
+  `EmpNo` int(3) DEFAULT NULL,
+  `EmpName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `JoiningDate` date DEFAULT NULL,
+  `Salary` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `4NewEmployee3`
+--
+
+LOCK TABLES `4NewEmployee3` WRITE;
+/*!40000 ALTER TABLE `4NewEmployee3` DISABLE KEYS */;
+/*!40000 ALTER TABLE `4NewEmployee3` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Employee`
 --
 
@@ -149,6 +243,30 @@ INSERT INTO `NewEmployee1` VALUES
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Persons`
+--
+
+DROP TABLE IF EXISTS `Persons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Persons` (
+  `ID` int(11) NOT NULL,
+  `FirstName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `LastName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Age` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Persons`
+--
+
+LOCK TABLES `Persons` WRITE;
+/*!40000 ALTER TABLE `Persons` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Persons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ProductDetails`
 --
 
@@ -216,6 +334,32 @@ INSERT INTO `SaleDetails` VALUES
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Students`
+--
+
+DROP TABLE IF EXISTS `Students`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Students` (
+  `ID` int(11) NOT NULL,
+  `FirstName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `LastName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Age` int(10) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `CONSTRAINT_1` CHECK (`Age` >= 18)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Students`
+--
+
+LOCK TABLES `Students` WRITE;
+/*!40000 ALTER TABLE `Students` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Students` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `studentMarksB`
 --
 
@@ -278,4 +422,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-11  8:21:36
+-- Dump completed on 2022-10-11  9:40:01
